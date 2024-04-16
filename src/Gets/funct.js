@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 const Functionality = () => {
 
 
-    const [professions, setProfessions] = useState("");
+    const [professions, setProfessions] = useState([]);
 
     const getProfessions = () => {
         axios.get("https://weak-lime-squid-fez.cyclic.app/profession")
@@ -21,7 +21,7 @@ const Functionality = () => {
     }
 
     useEffect(() => {
-        getProfessions()
+        getProfessions();
     }, [])
 
     return (
